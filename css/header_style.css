@@ -1,0 +1,66 @@
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  /* 【核心细节】：给 body 顶部留出导航栏的高度，防止首屏内容被盖住 */
+  padding-top: 60px; 
+  background-color: #f9f9f9;
+}
+
+/* 导航栏核心样式 */
+.navbar {
+  position: fixed;     /* 将元素固定在视口中 */
+  top: 0;              /* 紧贴顶部 */
+  left: 0;             /* 从最左侧开始 */
+  width: 100%;         /* 宽度占满整屏 */
+  height: 60px;        /* 固定高度 */
+  
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;       /* 确保导航栏层级最高，不会被页面其他元素遮挡 */
+  
+  /* 为 JS 效果添加平滑过渡 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+/* JS 滚动时动态添加的类 */
+.navbar.scrolled {
+  background-color: #111; /* 滚动后背景变深 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 增加底部阴影 */
+}
+
+/* 内容区样式 */
+.content {
+  padding: 2rem;
+  text-align: center;
+}
