@@ -1,0 +1,71 @@
+.profile-sidebar {
+  position: fixed;
+  left: calc((100% - 800px) / 2 - 220px);
+  top: 100px;
+  z-index: 999;
+  width: 180px;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 200px;
+  border-radius: 50% / 45%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.profile-title {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.profile-university {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.profile-location {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-links a {
+  font-size: 1rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.profile-links a:hover {
+  color: #4CAF50;
+}
+
+@media (max-width: 1200px) {
+  .profile-sidebar {
+    display: none;
+  }
+}
